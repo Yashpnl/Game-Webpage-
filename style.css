@@ -1,21 +1,18 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap'); */
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans',sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
-section
-{
+section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
 }
-header
-{
+header {
     position: absolute;
     top: 0;
     width: 100%;
@@ -24,25 +21,27 @@ header
     justify-content: space-between;
     align-items: center;
 }
-header .logo img
-{
-    position: relative;
-    max-width: 200px;
+header .logo {
+    width: 60px;
+    height: 60px;
 }
-header i
-{
+header .logo img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+header i {
     font-size: 1.5em;
     cursor: pointer;
 }
-.navigation
-{
+.navigation {
     position: absolute;
     bottom: 30px;
     display: flex;
     gap: 30px;
 }
-.navigation li a
-{
+.navigation li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,23 +49,20 @@ header i
     height: 80px;
     background: cornsilk;
     color: black;
-    box-sizing: 0 10px 25px rgba(0,0,0,0,1);
+    box-sizing: 0 10px 25px rgba(0, 0, 0, 0, 1);
     border-radius: 50%;
     font-size: 1.5em;
     text-decoration: none;
 }
 .navigation li.active a,
-.navigation li.active a:hover
-{
+.navigation li.active a:hover {
     background: red;
     color: white;
 }
-.navigation li a:hover
-{
+.navigation li a:hover {
     color: red;
 }
-.imgScroll
-{
+.imgScroll {
     position: absolute;
     left: 0;
     padding: 60px 0;
@@ -74,64 +70,51 @@ header i
     display: flex;
     overflow-x: hidden;
 }
-.imgScroll div
-
-{
+.imgScroll div {
     display: flex;
     animation: animate 40s linear infinite;
     animation-delay: -40s;
-} 
-.imgScroll div:nth-child(2)
-{
+}
+.imgScroll div:nth-child(2) {
     animation: animate2 40s linear infinite;
     animation-delay: -20s;
 }
 .imgScroll:hover div,
-.imgScroll:hover div:nth-child(2)
-{
-    animation-play-state: paused ;
+.imgScroll:hover div:nth-child(2) {
+    animation-play-state: paused;
 }
 
-@keyframes animate
-{
-    0%
-    {
+@keyframes animate {
+    0% {
         transform: translateX(100%);
     }
-    100%
-    {
+    100% {
         transform: translateX(-100%);
     }
 }
-@keyframes animate2
-{
-    0%
-    {
+@keyframes animate2 {
+    0% {
         transform: translateX(0%);
     }
-    100%{
+    100% {
         transform: translateX(-200%);
     }
 }
-.imgScroll div img
-{
+.imgScroll div img {
     margin: 0 25px;
     max-width: 300px;
     border: 10px solid transparent;
     transition: 0.25s;
 }
-.imgScroll div img:hover
-{
+.imgScroll div img:hover {
     border: 10px solid white;
     box-shadow: 0 20px 40px black;
 }
-.imgScroll:hover div img
-{
+.imgScroll:hover div img {
     opacity: 0.05;
     filter: blur(5px);
 }
-.imgScroll div img:hover
-{
+.imgScroll div img:hover {
     opacity: 1;
     filter: blur(0px);
 }
